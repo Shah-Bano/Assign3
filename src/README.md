@@ -26,6 +26,10 @@ node fetch-strapi.mjs
 node rec-fetch-strapi.mjs
 npm install dotenv
 
+Install Netlify:
+npm install -g netlify-cli
+netlify login
+netlify deploy
 
 Then to launch the website to a broswer:
 npx @11ty/eleventy --serve

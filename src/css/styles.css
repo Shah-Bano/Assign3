@@ -1,3 +1,10 @@
+
+body {
+  background-color: rgb(1, 21, 27);
+  color: lightpink;
+  font-family: Arial, sans-serif;
+}
+
 h1 {
   color: lightpink;
   font-weight: bold;
@@ -17,12 +24,70 @@ p {
   color: lightpink;
 }
 
-body {
-  background-color: rgb(1, 21, 27);
-}
-
 li {
   color: lightpink;
+}
+
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; 
+}
+
+
+label {
+  flex: 1 100%; 
+  margin-bottom: 0.5rem;
+  color: lightpink;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+}
+
+input, textarea {
+  flex: 1 45%; 
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+button {
+  flex: 1 45%;
+  padding: 0.5rem;
+  background-color: lightblue;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  width: 100%; 
+  max-width: 200px; 
+}
+
+#spinner, #responseMessage {
+  flex: 1 100%; 
+  margin-top: 1rem;
+}
+
+#spinner {
+  display: none;
+}
+
+#responseMessage {
+  display: none;
+}
+
+
+.header {
+  background-color: #414141;
+  color: lightpink;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
@@ -35,15 +100,6 @@ li {
   align-items: center;
 }
 
-.header {
-  background-color: #414141;
-  color: lightpink;
-  text-align: center;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .pagination {
   padding-bottom: 5%;
@@ -51,6 +107,7 @@ li {
   justify-content: center;
   align-items: center;
 }
+
 .pagination a {
   color: lightblue;
   margin: 0 10px;
@@ -62,50 +119,4 @@ li {
   align-items: center;
   width: 150px;
   height: auto;
-}/*# sourceMappingURL=styles.css.map */
-
-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-label {
-  flex: 1 50%; /* Full width label for better spacing */
-  margin-bottom: 0.5rem;
-  margin-left: 25%;
-  color: lightpink
-}
-
-input, textarea {
-  flex: 1 45%; /* Adjust width to be smaller */
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  margin-right: 25%;
-  margin-left: 25%;
-}
-
-button {
-  flex: 1 100%;
-  padding: 0.5rem;
-  background-color: lightblue;
-  color: black;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  margin-right: 25%;
-  margin-left: 25%;
-}
-
-#spinner, #responseMessage {
-  flex: 1 100%;
-  margin-top: 1rem;
-}
-
-#spinner {
-  display: none;
-}
-
-#responseMessage {
-  display: none;
 }

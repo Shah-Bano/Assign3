@@ -5,6 +5,7 @@ title: "Contact Me!"
 
 <link rel="stylesheet" href="styles.css">
 
+<!-- The data-netlify="true" attribute is added to forms to let Netlify handle form submissions  -->
 <form id="contactForm" style="display: flex; flex-wrap: wrap;" method="POST" data-netlify="true">
   <label for="name">Your Name:</label>
   <input type="text" id="name" name="name" required>
@@ -34,14 +35,14 @@ title: "Contact Me!"
 
 <script>
   document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); 
 
-    // Show spinner
+    // Show loading spinner!! It is working right now :p
     document.getElementById('spinner').style.display = 'block';
 
     const formData = new FormData(e.target);
 
-    // Collect form data
+    // Collecting form data
     const data = {
       name: formData.get('name'),
       phone: formData.get('phone'),
@@ -50,7 +51,7 @@ title: "Contact Me!"
       message: formData.get('message')
     };
 
-    // Send the form data to your serverless function using fetch
+    // Sending data to the serverless function
     try {
       const response = await fetch('/.netlify/functions/send-contact-email', {
         method: 'POST',
@@ -62,15 +63,17 @@ title: "Contact Me!"
 
       const result = await response.json();
 
-      // Hide spinner and show success message
+      // Hiding the spinnner
       document.getElementById('spinner').style.display = 'none';
+
+      // Showing success messge
       document.getElementById('responseMessage').style.display = 'block';
 
     } catch (error) {
       console.error('Error sending form:', error);
 
-      // Optionally, you can display an error message
-      alert('There was an error sending your message. Please try again.');
+      // Error message
+      alert('There was an error sending your message. Please try again later.');
     }
   });
 </script>
