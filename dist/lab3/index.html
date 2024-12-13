@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Lab 3</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/index">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/recipes">Quick and easy recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact Me!</a>
+                </li>
+                <!-- TEST -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Blog Posts
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-1-documentation/">Assignment 1 Documentation</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-1/">Lab 1</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/first-strapi-entry/">First Strapi entry!</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-2/">Lab 2</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-2-documentation/">Assignment 2 Documentation</a></li>
+                        
+                    </ul>
+                </li>
+                <!-- TEST END -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        How does this website work?
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/README">README</a></li>
+                        <li><a class="dropdown-item" href="/about">About Me</a></li>
+                        <li><a class="dropdown-item" href="/lab3">Lab 3</a></li>
+                        <li><a class="dropdown-item" href="/termsAndConditions">Terms and Conditions</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+
+
+    <main>
+        <h1>Serverless Function Providers</h1>
+<h2>Introduction</h2>
+<p>Developers who don’t have the resources to manage servers can use serverless function providers to run code. These providers handle scaling, deployment, and infrastructure, allowing developers to focus solely on writing code and building applications.</p>
+<h2>Types of Serverless Function Providers</h2>
+<h3>1. <strong>AWS Lambda</strong></h3>
+<ul>
+<li><strong>Description</strong>: AWS Lambda is a cloud service offered by Amazon Web Services (AWS). It is popular due to its powerful computing capabilities and seamless integration with AWS services like DynamoDB, S3, and API Gateway.</li>
+<li><strong>Features</strong>: Lambda runs code automatically in response to events like file uploads or database updates. It is highly scalable and adjusts to traffic fluctuations efficiently.</li>
+<li><strong>Pricing</strong>: AWS follows a <strong>pay-as-you-go</strong> model, meaning you only pay for the resources you use. However, this can be a disadvantage if scaling limits are not properly configured.</li>
+<li><strong>Complexity</strong>: AWS services have a steep learning curve, which may not be ideal for developers looking for minimal setup.</li>
+<li><strong>Experience</strong>: From my experience with AWS Lambda (from an AWS course), I found it not ideal for this assignment as AWS services are best suited for applications already built within the AWS ecosystem.</li>
+</ul>
+<h3>2. <strong>Google Cloud Functions (GCF)</strong></h3>
+<ul>
+<li><strong>Description</strong>: Owned by Google, Cloud Functions integrate seamlessly with other Google Cloud services like Firebase, BigQuery, and Pub/Sub.</li>
+<li><strong>Features</strong>: They are known for their low latency and fast cold starts, which are useful for real-time applications.</li>
+<li><strong>Pricing</strong>: Google Cloud Functions have a <strong>pay-per-use</strong> pricing model, generally considered more predictable and affordable compared to AWS.</li>
+<li><strong>Complexity</strong>: There is a learning curve, especially for those unfamiliar with Google Cloud’s services. My past experience with Firebase was not favorable, leaving me hesitant to return to Google Cloud Functions.</li>
+</ul>
+<h3>3. <strong>Microsoft Azure Functions</strong></h3>
+<ul>
+<li><strong>Description</strong>: Azure Functions integrate well with Microsoft services like Azure SQL and Active Directory.</li>
+<li><strong>Features</strong>: They offer low latency and cold starts, similar to Google Cloud Functions.</li>
+<li><strong>Pricing</strong>: Azure functions also follow a <strong>pay-per-use</strong> model.</li>
+<li><strong>Complexity</strong>: Azure is complex and better suited for databases or development environments rather than general-purpose serverless functions.</li>
+</ul>
+<h3>4. <strong>Netlify</strong></h3>
+<ul>
+<li><strong>Description</strong>: Netlify focuses on frontend serverless functions and is designed for modern web applications, particularly static pages.</li>
+<li><strong>Features</strong>: It’s easy to deploy functions with Netlify by adding a <code>netlify</code> folder and a <code>functions</code> subfolder, which handles deployment, scaling, and management.</li>
+<li><strong>Integration</strong>: Netlify integrates well with GitHub and offers continuous deployment.</li>
+<li><strong>Limitations</strong>: It is best suited for frontend-heavy projects, like static sites, and does not offer backend integrations like databases.</li>
+<li><strong>Recommendation</strong>: Given the simpler pricing model, minimal learning curve, and compatibility with Assignment 3 requirements, Netlify seems like the most appealing option for my project.</li>
+</ul>
+<hr>
+<p>Among the serverless function providers, <strong>Netlify</strong> stands out as the best choice due to its simplicity, ease of deployment, and compatibility with frontend-heavy applications. Since Assignment 3 does not require backend services like databases, Netlify aligns perfectly with the project’s requirements.</p>
+<hr>
+<h1>Email Service Providers Comparison</h1>
+<p>To send emails, there are several popular email service providers offering different features tailored to various project scopes.</p>
+<h2>SendGrid</h2>
+<p>SendGrid is a widely-used email service known for its reliable email delivery. It provides automated spam protection and features like whitelabeling, which can help boost sender reputation. SendGrid integrates well with other cloud services, making it an easy choice for developers already using platforms like AWS or Google Cloud. However, SendGrid lacks advanced customization options and detailed analytics, which makes it less suitable for those looking to gain deeper insights into customer engagement. It excels in straightforward, scalable email delivery but might not be ideal for users needing advanced analytics or custom integrations.</p>
+<hr>
+<h2>Mailgun</h2>
+<p>Mailgun is popular for its developer-friendly features such as tracking tools, detailed analytics, and spam complaint alerts. These tools help ensure emails land in recipients' inboxes and not their spam folders. Mailgun also offers domain registration and dedicated IPs, which improve sender reputation and boost deliverability. However, Mailgun’s customer support can be slow, and many users have reported issues with missing documentation or complex configurations requiring more technical knowledge, making it less accessible for new developers.</p>
+<hr>
+<h2>MailChimp</h2>
+<p>MailChimp is primarily known for marketing-focused tools like campaign management, audience segmentation, and email automation. It is user-friendly for marketers, allowing customization of email templates and managing large subscriber lists. However, MailChimp’s free tier options are more limited compared to other providers, and its pricing structure becomes restrictive, especially for larger projects or higher email volumes. For Assignment 3, MailChimp is less ideal as its strengths are geared more towards marketing than email delivery.</p>
+<hr>
+<p>One reason I chose Netlify is its ease of integration with web services like SendGrid, which simplifies deployment and email handling. SendGrid was attractive due to its free tier offering and better overall ease of management, though the phone number requirement could be a minor inconvenience. However, compared to Mailgun and MailChimp, SendGrid appears more user-friendly and better suited for the requirements of Assignment 3.</p>
+<hr>
+<h2>Sources:</h2>
+<p>Sources:</p>
+<p>https://payproglobal.com/answers/what-is-cold-start/#:~:text=In%20the%20context%20of%20serverless,to%20reach%20its%20full%20performance.
+https://docs.aws.amazon.com/whitepapers/latest/security-overview-aws-lambda/benefits-of-lambda.html
+https://medium.com/@geethika.guruge/the-good-bad-the-ugly-of-aws-lambda-e06df5930a9
+https://www.donnchadh.dev/the-pros-and-cons-of-using-serverless-with-azure-functions-when-to-use-it-and-when-to-avoid-it/#:~:text=The%20Pros%20and%20Cons%20of%20Using%20Serverless%20with,a%20compelling%20middle%20ground.%20...%204%20Conclusion%20
+https://www.cloudthat.com/resources/blog/use-cases-and-benefits-of-google-cloud-functions-for-serverless-architectures
+https://www.netlify.com/blog/2018/08/06/five-key-benefits-of-going-serverless/
+https://docs.netlify.com/integrations/email-integration/
+https://www.mailmodo.com/guides/sendgrid-review/
+https://www.emailtooltester.com/en/reviews/mailchimp/
+https://maileroo.com/blog/mailgun-review/
+Used Chatgpt to ensure layout is consistent</p>
+
+        
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<footer class="footer">
+    <p>&copy; <span id="current-year"></span> Shah Bano</p>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <ul>
+        <li><a href="/termsAndConditions">Terms and Conditions</a></li>
+    </ul>
+</footer>
+
+</html>
