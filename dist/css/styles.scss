@@ -49,38 +49,42 @@ form {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
 
 label {
-  flex: 1 50%; /* Full width label for better spacing */
+  flex: 1 100%;
   margin-bottom: 0.5rem;
-  margin-left: 25%;
   color: $primary-color;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
 }
 
 input, textarea {
-  flex: 1 45%; /* Adjust width to be smaller */
+  flex: 1 45%;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  margin-right: 25%;
   margin-left: 25%;
+  margin-right: 25%;
 }
 
 button {
-  flex: 1 100%;
+  flex: 1 45%;
   padding: 0.5rem;
   background-color: $secondary-color;
   color: black;
   font-weight: bold;
   border: none;
   cursor: pointer;
-  margin-right: 25%;
-  margin-left: 25%;
+  width: 100%; 
+  max-width: 200px; 
 }
 
 #spinner, #responseMessage {
-  flex: 1 100%;
+  flex: 1 100%; 
   margin-top: 1rem;
+  color: $primary-color;
 }
 
 #spinner {
@@ -89,4 +93,14 @@ button {
 
 #responseMessage {
   display: none;
+}
+
+
+.spinner-border {
+  color: $primary-color; 
+}
+
+#spinner .fa-spinner.text-pink {
+  color: $primary-color; 
+  align-items: center;
 }

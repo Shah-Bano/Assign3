@@ -50,7 +50,42 @@
 
 
     <main>
-        
+        <h1>Setting up Netlify</h1>
+<p>I started off by publishing my folder into GitHub so I can link it on Netlify.</p>
+<p>I followed the docs steps for getting my API using SendGrid, and setting it up in Netlify. This allows me to just refer to it in my code rather than hardcoding it. I did have a <code>.env</code> file where I hardcoded my API just for testing purposes, but my final product refers to the Netlify one.</p>
+<h2>./netlify/functions/send-contact-email.js</h2>
+<p>@sendgrid/mail imports the package which provides the functionality to send emails through SendGrid.</p>
+<p>const apiKey = process.env.NETLIFY_EMAILS_PROVIDER_API_KEY;</p>
+<p>The SG API key is retrieved from the environment variable and it is used to authenticate and send emails. It is stored securely, not hardcoded to keep data safe.</p>
+<p>exports.handler is how the serverless function is created in Node.js, used to deploy on Netlify.</p>
+<p>My initial plan was to parse the request body if it is a POST request, however, it was throwing me errors, so I commented it out. But the main construction of the email message remains:</p>
+<p>const msg = {
+to: 'xxx@xxx.com',<br>
+from: body.email,<br>
+subject: <code>Automated Message: ${body.subject}</code>,
+text: <code>Name: ${body.name}\nPhone: ${body.phone}\nEmail: ${body.email}\nMessage: ${body.message}</code>,
+};</p>
+<p>to is for the recipient of the email, which is set beforehand. from will be the email address my user puts in the contact form. The same applies to subject and text. In theory, the contents of the email parse and print out, with the variables as placeholders.</p>
+<p>The try and catch block essentially tries sending the email message to SendGrid and returns a success message, otherwise, it will return an error message. The error message was just put in for debugging purposes. It can block many issues like the wrong API key, invalid recipient email, etc.</p>
+<h2>contact.ejs</h2>
+<p>This page handles form submission and the associated content in the script tag. Keeping the logic in the same file helped me track the form behavior.</p>
+<h3>Form Structure</h3>
+<ul>
+<li>data-netlify=&quot;true&quot; ensures Netlify processes the form submission, validation, and sends it to the specified serverless function.</li>
+<li>Correct form element types ensure proper validation.</li>
+</ul>
+<h3>Spinner Setup</h3>
+<div id="spinner" style="display: none;">
+  <i class="fas fa-spinner fa-spin"></i> Sending...
+</div>
+<ul>
+<li>The display: none; hides the spinner initially.</li>
+<li>Once the form is submitted, the spinner becomes visible, giving visual feedback to the user.</li>
+</ul>
+<h2>contact.ejs Script</h2>
+<p>formData collects the form data, and I linked a JS file to handle the POST request to the serverless function.</p>
+<p>Finally, I applied some styling to the form, including the spinner (attached through favicon). I made it match the aesthetic of my website. I also added a link to Lab 3 in the nav bar.</p>
+
         
     </main>
 
