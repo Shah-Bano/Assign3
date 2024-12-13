@@ -1,6 +1,6 @@
 const sgMail = require('@sendgrid/mail');
 
-sgMail.setApiKey(process.env.NETLIFY_EMAILS_PROVIDER_API_KEY);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 
 exports.handler = async function(event, context) {
