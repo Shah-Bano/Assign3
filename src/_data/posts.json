@@ -1,0 +1,168 @@
+[
+    { 
+        "title": "Quick Oreo Ice Cream", 
+        "content": {
+            "ingredients": [
+                "1 package of Oreos",
+                "2 cups of vanilla ice cream",
+                "1 cup of whipped cream"
+            ],
+            "instructions": [
+                "Crush the Oreos.",
+                "In a bowl, mix crushed Oreos with softened vanilla ice cream and whipped cream.",
+                "Pour the mixture into a container and freeze for at least 4 hours.",
+                "Serve and enjoy!"
+            ]
+        },
+        "date": "2024-01-01" 
+    },
+    { 
+        "title": "No-Bake Chocolate Mousse", 
+        "content": {
+            "ingredients": [
+                "1 cup of heavy cream",
+                "1/2 cup of chocolate chips",
+                "1/4 cup of sugar"
+            ],
+            "instructions": [
+                "Melt chocolate chips in a bowl.",
+                "Whip the heavy cream until soft peaks form, then fold in the melted chocolate and sugar.",
+                "Spoon into cups and refrigerate for 2 hours before serving."
+            ]
+        },
+        "date": "2024-02-01" 
+    },
+    { 
+        "title": "Easy Peanut Butter Cookies", 
+        "content": {
+            "ingredients": [
+                "1 cup of peanut butter",
+                "1 cup of sugar",
+                "1 egg"
+            ],
+            "instructions": [
+                "Preheat oven to 350°F (175°C).",
+                "Mix all ingredients in a bowl.",
+                "Roll into balls, place on a baking sheet, and flatten with a fork.",
+                "Bake for 10 minutes."
+            ]
+        },
+        "date": "2024-03-01" 
+    },
+    { 
+        "title": "3-Ingredient Banana Pancakes", 
+        "content": {
+            "ingredients": [
+                "1 ripe banana",
+                "2 eggs",
+                "1/2 tsp baking powder"
+            ],
+            "instructions": [
+                "Mash the banana in a bowl.",
+                "Add eggs and baking powder, mix well.",
+                "Cook on a non-stick skillet over medium heat until golden brown on both sides."
+            ]
+        },
+        "date": "2024-04-01" 
+    },
+    { 
+        "title": "Microwave Mug Cake", 
+        "content": {
+            "ingredients": [
+                "4 tbsp flour",
+                "4 tbsp sugar",
+                "2 tbsp cocoa powder",
+                "1 egg",
+                "3 tbsp milk",
+                "3 tbsp oil"
+            ],
+            "instructions": [
+                "Mix all ingredients in a microwave-safe mug.",
+                "Microwave for 1-2 minutes until cooked through."
+            ]
+        },
+        "date": "2024-05-01" 
+    },
+    { 
+        "title": "Frozen Yogurt Bark", 
+        "content": {
+            "ingredients": [
+                "2 cups of yogurt",
+                "1/2 cup of mixed berries",
+                "1 tbsp honey"
+            ],
+            "instructions": [
+                "Spread yogurt on a parchment-lined baking sheet.",
+                "Sprinkle berries and drizzle honey on top.",
+                "Freeze for 2 hours, then break into pieces."
+            ]
+        },
+        "date": "2024-06-01" 
+    },
+    { 
+        "title": "Caprese Salad Skewers", 
+        "content": {
+            "ingredients": [
+                "Cherry tomatoes",
+                "Mozzarella balls",
+                "Fresh basil",
+                "Balsamic glaze"
+            ],
+            "instructions": [
+                "Thread tomatoes, mozzarella, and basil onto skewers.",
+                "Drizzle with balsamic glaze before serving."
+            ]
+        },
+        "date": "2024-07-01" 
+    },
+    { 
+        "title": "Easy Garlic Butter Shrimp", 
+        "content": {
+            "ingredients": [
+                "1 lb shrimp",
+                "4 cloves garlic",
+                "1/4 cup butter",
+                "Lemon juice"
+            ],
+            "instructions": [
+                "Melt butter in a pan, add minced garlic.",
+                "Add shrimp and cook until pink.",
+                "Squeeze lemon juice before serving."
+            ]
+        },
+        "date": "2024-08-01" 
+    },
+    { 
+        "title": "Homemade Guacamole", 
+        "content": {
+            "ingredients": [
+                "2 ripe avocados",
+                "1 lime",
+                "Salt",
+                "Diced onion",
+                "Diced tomato",
+                "Chopped cilantro"
+            ],
+            "instructions": [
+                "Mash avocados in a bowl.",
+                "Add lime juice, salt, and mix in onion, tomato, and cilantro."
+            ]
+        },
+        "date": "2024-09-01" 
+    },
+    { 
+        "title": "Simple Fruit Salad", 
+        "content": {
+            "ingredients": [
+                "2 cups of mixed fruit (like berries, melon, and grapes)",
+                "1 tbsp honey",
+                "Mint leaves"
+            ],
+            "instructions": [
+                "Combine fruit in a bowl.",
+                "Drizzle with honey and garnish with mint leaves."
+            ]
+        },
+        "date": "2024-10-01" 
+    }
+]

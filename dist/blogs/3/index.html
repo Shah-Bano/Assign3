@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Blogs</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/index">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/recipes">Quick and easy recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                </li>
+                <!-- TEST -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Blog Posts
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-1-documentation/">Assignment 1 Documentation</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-1/">Lab 1</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/first-strapi-entry/">First Strapi entry!</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-2/">Lab 2</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-2-documentation/">Assignment 2 Documentation</a></li>
+                        
+                    </ul>
+                </li>
+                <!-- TEST END -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        How does this website work?
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/README">README</a></li>
+                        <li><a class="dropdown-item" href="/about">About Me</a></li>
+                        <li><a class="dropdown-item" href="/termsAndConditions">Terms and Conditions</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+
+
+    <main>
+        
+
+  
+  <h1>Lab 2</h1>
+
+  
+
+  <h2>Content</h2>
+  <p>Headless CMS Overview
+I was somewhat aware of headless CMS&#39;s through WIX. After exploring various options, I understand why many people choose to use CMSs. They are convenient for content creators who aren&#39;t keen on learning programming, as they allow easy management of website content without the need for technical skills. For this project, I researched Strapi, Contentful, Prismic, Sanity, and Ghost.
+
+Strapi
+Strapi is known for its developer-friendly open-source nature. It is fully customizable and allows you to self-host. It also offers both RESTful and GraphQL APIs for content delivery, making it a popular choice among developers.
+
+My Experience with Strapi:
+I chose Strapi for its easy integration with Visual Studio. Initially, downloading it was confusing due to conflicting information, but I decided to follow the official documentation instead of video tutorials. Eventually, I managed to launch the admin page, where I created a collection and defined the type of content to be managed by that collection.
+
+
+
+I had several options for defining input types, and I chose a blog-style setup, selecting text for the title, content, and author, a date type, and a media type to allow multiple pieces of media.
+
+After filling in two entries and publishing them, I checked Visual Studio and saw the schema, which displayed how the content types were assigned.
+
+
+
+Advantages of Strapi:
+Flexibility: Open-source, self-hosted, and fully customizable.
+Developer-Friendly: Easy API setup with good integration with databases.
+Role-Based Access Control: Ability to define user roles and permissions.
+Overall, once the setup was completed, it was smooth sailing to create entries, collections, and assign their data types. Plus, the free trial did not require credit card information, which was a nice bonus.
+
+Contentful
+Contentful is a SaaS-based, API-first CMS designed for scalability and enterprise needs. It features a user-friendly dashboard that enables teams to organize and deliver content across multiple digital platforms.
+
+Advantages of Contentful:
+Scalability: Supports complex content hierarchies, making it ideal for large-scale projects.
+API-First Approach: Includes both REST and GraphQL APIs for easy integration.
+User-Friendly Interface: Simplifies content creation for non-technical users.
+Contentful is great for teams that need a scalable CMS solution with multi-user access. It&#39;s ideal for content creators who are not familiar with programming but still need an efficient way to manage content.
+
+My Experience with Contentful
+I chose to use Contentful as well, primarily because it promotes itself as a SaaS-based application. I’ve seen ads for it before, so I thought it would be a good idea to give it a try.
+
+During the setup process, I encountered some challenges, particularly with GitHub repositories. I was initially hesitant to link my GitHub account, but it seemed necessary to get everything working properly. While this wasn’t a major disadvantage, it did feel a bit inconvenient at first. On the positive side, being able to access my content through another platform can be helpful in case there are issues with accessing it through Contentful.
+
+One thing that surprised me was when Contentful created and pushed random content to my GitHub account when I returned to the platform. It caught me off guard for a moment, I got scared someone already got access to my GitHub lol. However, after a bit of thought, I realized that I had chosen a template, which is why it pushed a bunch of entries automatically.
+
+
+
+While using the template, I found the process a bit confusing. Instead of building content step-by-step from scratch, I had to sift through the template to figure out where everything went. This wasn’t necessarily a negative aspect, but it did make the process a bit more challenging.
+
+
+
+
+One feature that stood out to me was Contentful’s API-first approach. It allows you to integrate the CMS with various platforms using their well-documented REST and GraphQL APIs. This flexibility made it easy to connect Contentful to other services, and it gave me confidence that the platform could scale with my project as it grows.
+
+Additionally, I was impressed by Contentful’s scalability. It supports complex content hierarchies, making it suitable for anything from a small blog to a large-scale digital platform. I also appreciated how it allows multiple users to access and manage content simultaneously, which is a great advantage for team collaboration.
+
+Overall, I enjoyed how Contentful streamlined the content management process, offering both structure and flexibility. It’s accessible to non-developers, but also scalable enough for more complex projects.
+
+Sanity
+Sanity is a headless CMS that&#39;s especially great for developers, offering flexibility and customization in content modeling.
+
+Advantages of Sanity:
+Real-Time Collaboration: Allows multiple users to work on content simultaneously.
+API-First: Easy content delivery across platforms like websites and apps.
+Highly Customizable: Offers flexibility in building content structures and interfaces.
+Disadvantages of Sanity:
+Requires Developer Skills: Not suitable for users without coding knowledge.
+Smaller Plugin Ecosystem: Fewer pre-made solutions than other CMS platforms.
+Learning Curve: Can be tough to learn for beginners.
+Sanity is newer (launched in 2015) but has rapidly gained popularity due to its modern design and flexibility.
+
+Prismic
+Prismic offers flexibility and is well-suited for projects requiring content management without being tied to a specific front-end technology.
+
+Advantages of Prismic:
+Flexibility: Compatible with various front-end technologies like React and Vue.
+Ease of Use: Simple for content creators with an intuitive interface.
+Reusability with Slices: Allows creation of reusable content blocks.
+Scheduling and Version Control: Enables scheduling and tracking of content changes.
+Localization: Supports multi-language content management.
+Disadvantages of Prismic:
+Learning Curve: Setting up custom types or working with the API can be challenging for beginners.
+Cost: Can be expensive for larger teams or advanced features.
+Prismic has been around since 2013 and offers a solid choice for flexible, easy-to-use content management across different platforms.
+
+My Experience with Prismic
+I decided to give Prismic a try because of its flexibility and ease of use. Prismic is a headless CMS that offers a lot of freedom in terms of front-end technology, making it a versatile option for various projects. One of the things that really stood out to me was its slice machine feature. It allows you to create reusable content blocks, which you can easily mix and match to build different pages. This flexibility made content management more streamlined and efficient.
+
+Setting up Prismic was straightforward. I found the user interface to be intuitive, which is great fo content creators who don’t have a technical background. It was easy to create custom content types, and I could quickly start adding content without feeling overwhelmed. This makes Prismic a great option for teams with diverse skill sets.
+
+One feature that impressed me was Prismic’s scheduling and version control. The ability to schedule content for future publishing and revert to previous versions of content if needed is a huge plus, especially for teams that need to collaborate on content creation and updates. It made me feel more in control of the content workflow.
+
+Prismic also handles localization very well, which is a great feature for projects targeting a global audience. It makes managing multi-language content a lot easier, ensuring that content is accessible to users around the world.
+
+However, there were a couple of challenges. While Prismic is generally user-friendly, there is a learning curve when it comes to setting up custom content types and working with the API. It took me a little while to get comfortable with the nuances of the system. Additionally, Prismic can get pretty expensive for larger teams or when you need access to more advanced features.
+
+Despite these challenges, Prismic was a great choice for my project. It combines flexibility, ease of use, and powerful features like slice machine, scheduling, and version control, which made it a strong candidate for managing content across platforms. It’s definitely a solid option if you’re looking for a headless CMS that is both user-friendly and scalable.
+
+
+
+Ghost
+Ghost is a CMS optimized for blogging and content publishing, offering a clean, fast platform for online writers.
+
+Advantages of Ghost:
+Optimized for Publishing: Great for bloggers, with a minimalist design for efficient content creation.
+Performance: Built on Node.js, ensuring fast load times and better SEO.
+Markdown Support: Ideal for writers who prefer a distraction-free writing environment.
+Membership and Subscription: Supports direct monetization through built-in membership features.
+Simple Setup: Easy to set up with an option for managed hosting.
+Disadvantages of Ghost:
+Limited Use Cases: Best suited for blogs or content publishing, not complex websites.
+Limited Extensions: Smaller plugin ecosystem than platforms like WordPress or Strapi.
+Focus on Simplicity: Its simplicity may limit customization for advanced needs.
+Ghost, launched in 2013, remains a popular choice for bloggers and content publishers due to its performance and ease of use.
+
+Conclusion
+Each CMS offers its own set of advantages and limitations, making them suited to different needs and use cases. Strapi is ideal for developers looking for flexibility, while Contentful is perfect for teams requiring scalability. Sanity offers real-time collaboration for developers, and Prismic provides a simple solution for easy content management. Ghost is a great choice for bloggers, offering excellent performance and simplicity.
+
+I do think Strapi is what I will choose for my Assignment 1 because it seems the best in terms of having easy connectivity with visual studio, as well as simple interface. I found its documentation to be a bit more clean than the other two.</p>
+
+   
+
+
+
+<div class="pagination">
+  
+    <a href="/blogs/2/">Previous</a>
+  
+
+  
+    <a href="/blogs/4/">Next</a>
+  
+</div>
+
+        
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<footer class="footer">
+    <p>&copy; <span id="current-year"></span> Shah Bano</p>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <ul>
+        <li><a href="/termsAndConditions">Terms and Conditions</a></li>
+    </ul>
+</footer>
+
+</html>

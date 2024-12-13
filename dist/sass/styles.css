@@ -1,0 +1,12 @@
+h2 {
+  color: lightpink;
+  font-weight: bold; /* Bold text */
+}
+
+p {
+  color: lightpink;
+}
+
+body {
+  background-color: rgb(1, 21, 27);
+}

@@ -1,0 +1,39 @@
+---
+layout: layouts/layout.ejs
+title: "Blogs"
+pagination:
+  data: blogs.data
+  size: 1
+  alias: paginatedBlogs
+---
+
+<% if (pagination.items.length > 0) { %>
+  <% const blog = pagination.items[0]; %>
+  <h1><%= blog.postTitle %></h1>
+
+  <% if (blog.media && blog.media.url) { %>
+    <img src="http://localhost:1337<%= blog.media.url %>" alt="<%= blog.media.alternativeText || blog.postTitle %>" />
+  <% } %>
+
+  <h2>Content</h2>
+  <p><%= blog.blogContent %></p>
+
+   
+<% } else { %>
+  <p>No blogs found.</p>
+<% } %>
+
+
+<div class="pagination">
+  <% if (pagination.href.previous) { %>
+    <a href="<%= pagination.href.previous %>">Previous</a>
+  <% } else { %>
+    <span>Previous</span>
+  <% } %>
+
+  <% if (pagination.href.next) { %>
+    <a href="<%= pagination.href.next %>">Next</a>
+  <% } else { %>
+    <span>Next</span>
+  <% } %>
+</div>

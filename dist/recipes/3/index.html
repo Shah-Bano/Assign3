@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Quick and easy recipes</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/index">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/recipes">Quick and easy recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                </li>
+                <!-- TEST -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Blog Posts
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-1-documentation/">Assignment 1 Documentation</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-1/">Lab 1</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/first-strapi-entry/">First Strapi entry!</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-2/">Lab 2</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-2-documentation/">Assignment 2 Documentation</a></li>
+                        
+                    </ul>
+                </li>
+                <!-- TEST END -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        How does this website work?
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/README">README</a></li>
+                        <li><a class="dropdown-item" href="/about">About Me</a></li>
+                        <li><a class="dropdown-item" href="/termsAndConditions">Terms and Conditions</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+
+
+    <main>
+        <form action="/filtered-recipes" method="get">
+  <select name="recipeType" id="recipe-filter">
+    <option value="">Select Recipe Type</option>
+    <option value="Sweet">Sweet</option>
+    <option value="Savory ">Savory</option>
+  </select>
+  <button type="submit">Submit</button>
+</form>
+
+
+   
+  <h1>No-Bake Chocolate Mousse</h1> 
+
+   
+    <img src="http://localhost:1337/uploads/cbocolatemousse_9a4afb5836.jpeg" alt="No-Bake Chocolate Mousse" /> 
+  
+
+  <h2>Ingredients</h2>
+  <pre>1 cup of heavy cream
+1/2 cup of chocolate chips
+1/4 cup of sugar</pre>
+
+  <h2>How to Make It?</h2>
+  <p>Melt chocolate chips in a bowl.
+Whip the heavy cream until soft peaks form, then fold in the melted chocolate and sugar.
+Spoon into cups and refrigerate for 2 hours before serving.</p> 
+
+
+
+<div class="pagination">
+    
+        <a href="/recipes/2/">Previous</a>
+    
+    
+    
+        <a href="/recipes/4/">Next</a>
+    
+</div>
+
+        
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<footer class="footer">
+    <p>&copy; <span id="current-year"></span> Shah Bano</p>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <ul>
+        <li><a href="/termsAndConditions">Terms and Conditions</a></li>
+    </ul>
+</footer>
+
+</html>

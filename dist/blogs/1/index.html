@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Blogs</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/index">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/recipes">Quick and easy recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                </li>
+                <!-- TEST -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Blog Posts
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-1-documentation/">Assignment 1 Documentation</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-1/">Lab 1</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/first-strapi-entry/">First Strapi entry!</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-2/">Lab 2</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-2-documentation/">Assignment 2 Documentation</a></li>
+                        
+                    </ul>
+                </li>
+                <!-- TEST END -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        How does this website work?
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/README">README</a></li>
+                        <li><a class="dropdown-item" href="/about">About Me</a></li>
+                        <li><a class="dropdown-item" href="/termsAndConditions">Terms and Conditions</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+
+
+    <main>
+        
+
+  
+  <h1>Lab 1</h1>
+
+  
+
+  <h2>Content</h2>
+  <p>1. Templating Engines: EJS, Handlebars, and Pug
+After researching various templating engines, I chose to delve into EJS, Handlebars, and Pug due to their frequent mention in forums.
+
+1.1 EJS
+Pros
+Syntax: EJS uses a syntax similar to JavaScript, making it easier for both beginners and experienced developers to learn and use.
+Community Support: With a large user base, EJS has extensive support in forums, documentation, and contributions, making it likely to find help when issues arise.
+Flexibility: You can easily create dynamic content using variables, conditions, or loops. It supports partials, maintaining a DRY (Don&#39;t Repeat Yourself) approach, which aids debugging.
+Cons
+Management: As projects become complex, templates can become hard to follow.
+Speed: Its flexibility and customization options may lead to resource allocation that can slow down overall runtime.
+1.2 Handlebars.js
+Pros
+Syntax: Handlebars features a simple syntax, making it easy to set up, which is suitable for rapid development cycles.
+Separation of Logic and Presentation: Minimizes complex JavaScript in templates, enhancing comprehension and modification.
+Helpers: Custom reusable functions allow for encapsulation of common functionalities, reducing code length and enabling developers to focus on other aspects.
+Cons
+Limited: Handlebars may not be ideal for larger, more complex projects due to its focus on presentation.
+Speed: It can run slower if templates become too complex.
+1.3 Pug
+Pros
+Concise: The syntax is cleaner and more organized, requiring less typing.
+Supports Complex Features: Pug templates can inherit from one another and support loops and conditions, providing consistent layouts.
+Cons
+Fewer Users: Pug has a smaller user base, leading to less community support and fewer tutorials/documentation, which can complicate problem-solving.
+Conclusion
+After exploring these three templating engines, I believe EJS aligns best with my goals as a student. While Pug is efficient, it feels intimidating due to the lack of extensive documentation. EJS strikes a good balance between logic and presentation, offering abundant resources that aid in developing self-learning skills compared to Handlebars and Pug.
+
+2. SSG Applications
+Choosing a static site generator (SSG) really depends on the purpose of your project. Here are three popular options I explored: Jekyll, Hugo, and Gatsby.
+
+2.1 Jekyll
+Jekyll is one of the most popular SSGs, offering extensive support in terms of documentation and community resources. Built using Ruby, it may deter developers unfamiliar with the language, but it provides ready-made themes that can ease the learning curve. Additionally, Jekyll works well with GitHub Pages, allowing free website hosting—making it a great choice for portfolios, especially for new developers.
+
+Cons:
+
+Speed: Jekyll can be slower to operate, which may prolong the building process and affect production timelines.
+2.2 Hugo
+Hugo is known for its fast build times, even for larger websites, making it attractive for developers with tighter deadlines. It allows for improved productivity by enabling a focus on content creation rather than build times.
+
+Built using Go, Hugo efficiently handles multiple files and tasks simultaneously, supporting various content types like blogs and portfolios. However, the Go templating system can be challenging for those accustomed to JavaScript or Ruby, and limited plugin support may restrict functionality.
+
+2.3 Gatsby
+Gatsby is React-based, appealing to developers familiar with JavaScript. It includes GraphQL support, allowing efficient data pulling from various sources, such as markdown files. This reduces data transfer and improves site performance. Gatsby also offers starter templates for easier project initiation.
+
+Cons:
+
+Build Times: Gatsby can experience slower build times due to data fetching and processing; larger datasets can exacerbate this issue.
+3. 11ty Uses in Our Project
+In our project using 11ty, we followed the steps outlined in the main &#34;Get Started&#34; document.
+
+Installation: We began by creating a package.json file and installing Eleventy, essential for running 11ty effectively.
+Running 11ty: We use the terminal and the --serve command to view pages.
+Template Creation: We create templates using Markdown and HTML, ensuring all files follow the same structure without code repetition.
+Key Features:
+
+API Integration: We used APIs to display dynamic content from external sources, allowing for regular content updates.
+Custom Collections: These organize content based on set criteria, facilitating content management and enabling specific queries without processing unrelated files. They also support dynamic page creation and content filtering.
+4. Front Matter
+Front matter is essentially metadata located at the start of every file within a project, traditionally in a markdown file. It is enclosed within &#39;---&#39; and can include data such as the title, layout, and author.
+
+Benefits:
+
+Organizes content effectively and allows for dynamic filtering and display.
+Maintains consistent display across a project when using static site generators (SSGs).
+Enhances search engine visibility based on accurate tag organization.
+Provides context for future users, indicating when the file was last updated and by whom.
+Sources
+Modern Web Development Concepts
+Pros and Cons of Popular JavaScript Templating Engines
+Handlebars.js Installation Guide
+EJS Pros and Cons
+A Beginner&#39;s Guide to Pug
+Best Static Website Generators
+Hugo vs. Jekyll Comparison
+Pros and Cons of Using Gatsby
+11ty Configuration Documentation
+11ty Documentation
+YouTube Tutorial
+Front Matter Guide
+Used ChatGpt as well for fixing grammar and ensuring the layout of my content in this file is consistent :p</p>
+
+   
+
+
+
+<div class="pagination">
+  
+    <a href="/blogs/">Previous</a>
+  
+
+  
+    <a href="/blogs/2/">Next</a>
+  
+</div>
+
+        
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<footer class="footer">
+    <p>&copy; <span id="current-year"></span> Shah Bano</p>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <ul>
+        <li><a href="/termsAndConditions">Terms and Conditions</a></li>
+    </ul>
+</footer>
+
+</html>

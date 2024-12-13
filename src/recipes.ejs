@@ -1,0 +1,47 @@
+---
+layout: layouts/layout.ejs
+title: "Quick and easy recipes"
+pagination:
+  data: recipes.data
+  size: 1
+---
+<form action="/filtered-recipes" method="get">
+  <select name="recipeType" id="recipe-filter">
+    <option value="">Select Recipe Type</option>
+    <option value="Sweet">Sweet</option>
+    <option value="Savory ">Savory</option>
+  </select>
+  <button type="submit">Submit</button>
+</form>
+
+<% if (pagination.items.length > 0) { %>
+  <% const recipe = pagination.items[0]; %> 
+  <h1><%= recipe.Title %></h1> 
+
+  <% if (recipe.media && recipe.media[0]) { %> 
+    <img src="http://localhost:1337<%= recipe.media[0].url %>" alt="<%= recipe.media[0].alternativeText || recipe.Title %>" /> 
+  <% } %>
+
+  <h2>Ingredients</h2>
+  <pre><%= recipe.Ingredients %></pre>
+
+  <h2>How to Make It?</h2>
+  <p><%= recipe.Instructions %></p> 
+
+<% } else { %>
+  <p>No recipes found.</p>
+<% } %>
+
+<div class="pagination">
+    <% if (pagination.href.previous) { %>
+        <a href="<%= pagination.href.previous %>">Previous</a>
+    <% } else { %>
+        <span>Previous</span> 
+    <% } %>
+    
+    <% if (pagination.href.next) { %>
+        <a href="<%= pagination.href.next %>">Next</a>
+    <% } else { %>
+        <span>Next</span> 
+    <% } %>
+</div>

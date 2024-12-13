@@ -1,0 +1,65 @@
+h1 {
+  color: lightpink;
+  font-weight: bold;
+}
+
+h2 {
+  color: lightpink;
+  font-weight: bold;
+}
+
+h3 {
+  color: lightpink;
+  font-weight: bold;
+}
+
+p {
+  color: lightpink;
+}
+
+body {
+  background-color: rgb(1, 21, 27);
+}
+
+li {
+  color: lightpink;
+}
+
+.footer {
+  background-color: #414141;
+  color: lightpink;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: #414141;
+  color: lightpink;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination {
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination a {
+  color: lightblue;
+  margin: 0 10px;
+}
+
+.floating-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: auto;
+}/*# sourceMappingURL=styles.css.map */

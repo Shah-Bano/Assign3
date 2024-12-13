@@ -1,0 +1,17 @@
+$textColor: lightpink;
+$backgroundColor: rgb(1, 21, 27);
+
+
+
+h2 {
+    color: $textColor;
+    font-weight: bold; /* Bold text */
+}
+
+p {
+    color:$textColor
+}
+
+body {
+    background-color: $backgroundColor;
+}

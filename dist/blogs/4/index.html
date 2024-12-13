@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Blogs</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/index">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/recipes">Quick and easy recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                </li>
+                <!-- TEST -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Blog Posts
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-1-documentation/">Assignment 1 Documentation</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-1/">Lab 1</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/first-strapi-entry/">First Strapi entry!</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-2/">Lab 2</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-2-documentation/">Assignment 2 Documentation</a></li>
+                        
+                    </ul>
+                </li>
+                <!-- TEST END -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        How does this website work?
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/README">README</a></li>
+                        <li><a class="dropdown-item" href="/about">About Me</a></li>
+                        <li><a class="dropdown-item" href="/termsAndConditions">Terms and Conditions</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+
+
+    <main>
+        
+
+  
+  <h1>Assignment 2 Documentation</h1>
+
+  
+
+  <h2>Content</h2>
+  <p>I started off by setting up my Strapi account. The process was pretty okay. When I reached the point of populating my JSON files through fetching, it was difficult because nothing would load. When I put the link in my browser, it would populate the fields with errors. So, I had to look through and found out that within the settings, under roles, you need to publicize the find and findOne for your collections to make them visible and accessible to the public. I added a custom field &#34;slug&#34; from a Reddit post I found, which will be used for rendering my Lab 1, Lab 2, and Assignment 1 documentation, as well as this documentation.
+
+Next, I set up my `blogs.ejs` to follow the same format as my `recipe.ejs`, which has working pagination for convenience. All the pagination logic is the same throughout the project. The new bit was the alias I used for convenience, and the URL for the image.
+
+This function:
+```ejs
+&lt;% if (blog.media &amp;&amp; blog.media.url) { %&gt;
+    &lt;img src=&#34;&lt;%= blog.media.url %&gt;&#34; alt=&#34;&lt;%= blog.media.alternativeText || blog.postTitle %&gt;&#34; /&gt;
+&lt;% } %&gt;
+```
+First checks if the specific post has an image attached to it (the name of the field is media, that&#39;s why it is `blog.media.url`). My images were rendering, but I changed something and did not notice it messed with my images, so it was difficult to retrace and check what I had changed. It turns out it was just adding &#34;https&#34; before the URL because it works as a relative URL.
+
+The main work is in my `fetch-strapi.mjs` and `rec-fetch-strapi.mjs` files. I chose to separate these two because it made it more organized for me in terms of understanding. I&#39;m not sure if it would work within the same file, so I just chose to separate them for debugging.
+
+ fetch-strapi.mjs:
+I first imported modules, especially `node-fetch`, to help populate my JSON files with CMS content.
+
+Then, my `fetchStrapiContent` function is an asynchronous function that fetches data from Strapi using my pagination logic. The API URL is for requesting the data, and for my images, I used `populate=media`.
+
+Since I wanted one post per page, I set up the `pageSize` as 1 and `currentPage` just to keep track of which page, as it can help with filtering and getting more data for the previous and next links.
+
+The actual loop says that if there is more data, fetch the current page and how many items, which is then converted to JSON.
+
+The data is added into an array and increments with each post fetched. Once the data length reaches 0, it will stop my loop.
+
+To save the data to my file:
+```javascript
+const outputDir = path.join(process.cwd(), &#39;src&#39;, &#39;_data&#39;);
+if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
+fs.writeFileSync(path.join(outputDir, &#39;blogs.json&#39;), JSON.stringify({ data: allBlogs }, null, 2));
+```
+I first showed where to store it in my `src` and `_Data`. Then, for validation (because I don’t want it to throw errors or create new folders), I made it check if the `_Data` folder exists. I did add a line to create `_Data` if it&#39;s not there, but I think in the final project, I’ll remove it because I don’t want any typos creating new folders and making a mess.
+
+Lastly, the `writeFileSync` writes the collected `allBlogs` data and converts it into JSON.
+
+Just for debugging, I added a `console.log`, and finally, it calls my `fetchStrapiContent` function.
+
+ My `rec-strapi` function follows a similar format, but filtering was added to this.
+Firstly, in my recipe JSON from the last assignment, I added a field for `type`, which I wanted to use for filtering. This will take the &#34;sweet&#34; and &#34;savory&#34; types and push them to their respective JSON files. So, we have three JSON files. It’s not the most effective way in terms of data, but it worked somewhat, so I chose this path.
+
+I have a form for users to click &#34;sweet&#34; or &#34;savory&#34; and submit. If this filter isn&#39;t used, it will just show all the recipes.
+
+This is the main part in this file:
+```javascript
+if (recipeType) {
+  apiUrl += `&amp;filters[type][$eq]=${recipeType}`;
+}
+```
+In the future, I can add more types and multi-select each recipe. It acts as a tag. The `recipeType` is either 1 or 2 in this, and each is put in its own JSON. Once the submit is clicked, my intent was for it to load a separate page or replace that page with the filtered content. So far, it has not worked.
+
+</p>
+
+   
+
+
+
+<div class="pagination">
+  
+    <a href="/blogs/3/">Previous</a>
+  
+
+  
+    <span>Next</span>
+  
+</div>
+
+        
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<footer class="footer">
+    <p>&copy; <span id="current-year"></span> Shah Bano</p>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <ul>
+        <li><a href="/termsAndConditions">Terms and Conditions</a></li>
+    </ul>
+</footer>
+
+</html>

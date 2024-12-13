@@ -1,0 +1,73 @@
+$textColor: lightpink;
+$backgroundColor: rgb(1, 21, 27);
+$headingsWeight: bold;
+$footerbg: #414141;
+$linkColor: lightblue;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+h1 {
+    color: $textColor;
+    font-weight: $headingsWeight;
+}
+
+h2 {
+    color: $textColor;
+    font-weight: $headingsWeight /* Bold text */
+}
+
+h3 {
+    color: $textColor;
+    font-weight: $headingsWeight /* Bold text */
+}
+
+p {
+    color:$textColor;
+}
+
+body {
+    background-color: $backgroundColor;
+}
+
+li {
+    color:$textColor;
+}
+
+.footer {
+    background-color: $footerbg;
+    color: $textColor;
+    text-align: center;
+    padding: 10px;
+  
+    @include flex-center;
+}
+
+.header {
+    background-color: $footerbg;
+    color: $textColor;
+    text-align: center;
+    padding: 10px;
+  
+    @include flex-center;
+}
+
+.pagination{
+    padding-bottom: 5%;
+    @include flex-center;
+    
+    a{
+        color:$linkColor;
+        margin: 0 10px;
+    }
+}
+
+.floating-image{
+    @include flex-center; 
+    width: 150px; 
+    height: auto; 
+}

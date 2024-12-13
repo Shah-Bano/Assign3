@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>README</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/index">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/recipes">Quick and easy recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                </li>
+                <!-- TEST -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Blog Posts
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-1-documentation/">Assignment 1 Documentation</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-1/">Lab 1</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/first-strapi-entry/">First Strapi entry!</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/lab-2/">Lab 2</a></li>
+                        
+                            <li><a class="dropdown-item" href="/blogs/assignment-2-documentation/">Assignment 2 Documentation</a></li>
+                        
+                    </ul>
+                </li>
+                <!-- TEST END -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        How does this website work?
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/README">README</a></li>
+                        <li><a class="dropdown-item" href="/about">About Me</a></li>
+                        <li><a class="dropdown-item" href="/termsAndConditions">Terms and Conditions</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+
+
+    <main>
+        <p>My site loads a bunch of quick and easy recipies using pagination
+Here is how to run my website</p>
+<p>Use the terminal to download the following:
+npm install @11ty/eleventy</p>
+<p>To run 11ty :</p>
+<p>npm install ejs
+npm install sass
+npx @11ty/eleventy</p>
+<p>To run strapi:
+npx create-strapi-app assign1 --quickstart
+cd assign1
+npm run develop
+Click on link and log in</p>
+<p>cd strapi
+npm install node-fetch
+node fetch-strapi.mjs
+node rec-fetch-strapi.mjs</p>
+<p>Then to launch the website to a broswer:
+npx @11ty/eleventy --serve</p>
+
+        
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<footer class="footer">
+    <p>&copy; <span id="current-year"></span> Shah Bano</p>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <ul>
+        <li><a href="/termsAndConditions">Terms and Conditions</a></li>
+    </ul>
+</footer>
+
+</html>
