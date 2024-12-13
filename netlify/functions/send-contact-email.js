@@ -13,7 +13,8 @@ exports.handler = async function(event, context) {
     const msg = {
         //Recipient email address
         to: 'shahbano31@yahoo.com',
-        from: body.email,
+        from: 'shibistuff@gmail.com',
+        // from: 'body.email',
         // each  variable should be replaced by the content from the form input
         subject: `Automated Message: ${body.subject}`,
         text: `Name: ${body.name}\nPhone: ${body.phone}\nEmail: ${body.email}\nMessage: ${body.message}`,
