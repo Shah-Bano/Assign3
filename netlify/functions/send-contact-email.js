@@ -1,5 +1,7 @@
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey('SENDGRID_API_KEY=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');
+
+sgMail.setApiKey(process.env.NETLIFY_EMAILS_PROVIDER_API_KEY);
+
 
 exports.handler = async function(event, context) {
     const body = JSON.parse(event.body);
