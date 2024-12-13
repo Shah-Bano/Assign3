@@ -63,3 +63,49 @@ li {
   width: 150px;
   height: auto;
 }/*# sourceMappingURL=styles.css.map */
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+label {
+  flex: 1 50%; /* Full width label for better spacing */
+  margin-bottom: 0.5rem;
+  margin-left: 25%;
+  color: lightpink
+}
+
+input, textarea {
+  flex: 1 45%; /* Adjust width to be smaller */
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+button {
+  flex: 1 100%;
+  padding: 0.5rem;
+  background-color: lightblue;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+#spinner, #responseMessage {
+  flex: 1 100%;
+  margin-top: 1rem;
+}
+
+#spinner {
+  display: none;
+}
+
+#responseMessage {
+  display: none;
+}

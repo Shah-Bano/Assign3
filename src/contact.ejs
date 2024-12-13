@@ -1,0 +1,34 @@
+---
+layout: layouts/layout.ejs
+title: "Contact Me!"
+---
+
+<link rel="stylesheet" href="styles.css">
+
+<form id="contactForm" style="display: flex; flex-wrap: wrap;">
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" name="name" required>
+  
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone">
+  
+  <label for="email">E-mail Address:</label>
+  <input type="email" id="email" name="email" required>
+  
+  <label for="subject">Subject:</label>
+  <input type="text" id="subject" name="subject" required>
+  
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+  
+  <button type="submit">Submit</button>
+  
+  <div id="spinner" style="display: none;">
+    <i class="fas fa-spinner fa-spin"></i> Sending...
+  </div>
+  
+  <div id="responseMessage" style="display: none;">
+    <p>You'll hear from me soon!</p>
+  </div>
+</form>
+
