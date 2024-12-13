@@ -1,73 +1,92 @@
-$textColor: lightpink;
-$backgroundColor: rgb(1, 21, 27);
-$headingsWeight: bold;
-$footerbg: #414141;
-$linkColor: lightblue;
+/* Variables */
+$primary-color: lightpink;
+$secondary-color: lightblue;
+$background-color: rgb(1, 21, 27);
+$font-color: lightpink;
 
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
-
-h1 {
-    color: $textColor;
-    font-weight: $headingsWeight;
-}
-
-h2 {
-    color: $textColor;
-    font-weight: $headingsWeight /* Bold text */
-}
-
-h3 {
-    color: $textColor;
-    font-weight: $headingsWeight /* Bold text */
-}
-
-p {
-    color:$textColor;
+/* General Styles */
+h1, h2, h3, p, li {
+  color: $primary-color;
+  font-weight: bold;
 }
 
 body {
-    background-color: $backgroundColor;
+  background-color: $background-color;
 }
 
-li {
-    color:$textColor;
+.footer, .header {
+  background-color: #414141;
+  color: $primary-color;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer {
-    background-color: $footerbg;
-    color: $textColor;
-    text-align: center;
-    padding: 10px;
-  
-    @include flex-center;
+.pagination {
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header {
-    background-color: $footerbg;
-    color: $textColor;
-    text-align: center;
-    padding: 10px;
-  
-    @include flex-center;
+.pagination a {
+  color: $secondary-color;
+  margin: 0 10px;
 }
 
-.pagination{
-    padding-bottom: 5%;
-    @include flex-center;
-    
-    a{
-        color:$linkColor;
-        margin: 0 10px;
-    }
+.floating-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: auto;
 }
 
-.floating-image{
-    @include flex-center; 
-    width: 150px; 
-    height: auto; 
+/* Form Styles */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+label {
+  flex: 1 50%; /* Full width label for better spacing */
+  margin-bottom: 0.5rem;
+  margin-left: 25%;
+  color: $primary-color;
+}
+
+input, textarea {
+  flex: 1 45%; /* Adjust width to be smaller */
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+button {
+  flex: 1 100%;
+  padding: 0.5rem;
+  background-color: $secondary-color;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+#spinner, #responseMessage {
+  flex: 1 100%;
+  margin-top: 1rem;
+}
+
+#spinner {
+  display: none;
+}
+
+#responseMessage {
+  display: none;
 }
