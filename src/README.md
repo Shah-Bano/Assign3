@@ -24,6 +24,8 @@ cd strapi
 npm install node-fetch
 node fetch-strapi.mjs
 node rec-fetch-strapi.mjs
+npm install dotenv
+
 
 Then to launch the website to a broswer:
 npx @11ty/eleventy --serve

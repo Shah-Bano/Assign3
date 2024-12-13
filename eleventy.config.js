@@ -3,8 +3,9 @@ const ejsPlugin = require("@11ty/eleventy-plugin-ejs");
 const fs = require("fs-extra");
 const path = require("path");
 
+
 module.exports = function (eleventyConfig) {
-    
+
     eleventyConfig.addTemplateFormats("scss");
 
     
@@ -67,6 +68,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setBrowserSyncConfig({
         files: '/css/**/*.css'
     });
+
 
     return {
         dir: {

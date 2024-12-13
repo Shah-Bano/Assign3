@@ -18,6 +18,7 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-ejs": "^1.0.0",
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "fetch": "^1.1.0",
     "fs-extra": "^11.2.0",
